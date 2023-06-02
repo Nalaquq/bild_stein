@@ -19,6 +19,7 @@ def makedir():
 
 
 def resize():
+    makedir()
     db = "/home/nalkuq/bild_stein/db"
     resized = "/home/nalkuq/bild_stein/resized"
     os.chdir(db)
