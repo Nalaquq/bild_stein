@@ -1017,7 +1017,6 @@
 │   ├── Zamora-X99_Beltrán-Ortega_2016_no.324.jpg
 │   ├── Zamora-X9_HEOD_16110.jpg
 │   ├── Zaragoza-X1_HEOD_7514.jpg
-│   ├── resized.jpg
 │   ├── Álava-X10_HEOD_32054.jpg
 │   ├── Álava-X11_HEOD_32056.jpg
 │   ├── Álava-X12_HEOD_32104.jpg
@@ -1044,6 +1043,7 @@
 │   ├── Álava-X7_HEOD_32047.jpg
 │   ├── Álava-X8_HEOD_32048.jpg
 │   └── Álava-X9_HEOD_32053.jpg
+├── requirements.txt
 ├── resized
 │   ├── Albacete-X1_HEOD_7154.jpg
 │   ├── Alentejo-X1_HEOD_21252.jpg
@@ -2062,7 +2062,6 @@
 │   ├── Zamora-X99_Beltrán-Ortega_2016_no.324.jpg
 │   ├── Zamora-X9_HEOD_16110.jpg
 │   ├── Zaragoza-X1_HEOD_7514.jpg
-│   ├── resized.jpg
 │   ├── Álava-X10_HEOD_32054.jpg
 │   ├── Álava-X11_HEOD_32056.jpg
 │   ├── Álava-X12_HEOD_32104.jpg
@@ -2093,4 +2092,4 @@
 ├── tree.md
 └── venv.sh
 
-2 directories, 2091 files
+2 directories, 2090 files

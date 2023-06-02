@@ -3,7 +3,6 @@ import cv2
 import os
 
 
-
 home = os.getcwd()
 db = "/home/nalkuq/bild_stein/db"
 resized = "/home/nalkuq/bild_stein/resized"
