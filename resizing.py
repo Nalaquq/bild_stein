@@ -1,16 +1,18 @@
 import numpy as np
 import cv2
 import os
+import argparse
 
-
-home = os.getcwd()
-db = "/home/nalkuq/bild_stein/db"
-resized = "/home/nalkuq/bild_stein/resized"
+parser=argparse.ArgumentParser()
+parser.add_argument("-src", type=os.path.abspath,help="source directory containing images to be resized")
+parser.add_argument("-dst", type=os.path.abspath, help="destination directory to store resized images.")
+parser.add_argument("-size", type=int, help="size of scaling factor.")
+args=parser.parse_args()
 
 
 def makedir():
     try:
-        temp = "resized"
+        temp = args.dst
         os.mkdir(temp)
         print(f"a new directory named {temp} has been created.")
     except:
@@ -19,10 +21,10 @@ def makedir():
 
 def resize():
     makedir()
-    db = "/home/nalkuq/bild_stein/db"
-    resized = "/home/nalkuq/bild_stein/resized"
+    db = args.src
+    resized = args.dst
     os.chdir(db)
-    for img in os.listdir(db):
+    for img in os.listdir():
         # removes spaces in file names since that gives opencv problems
         r = img.replace(" ", "")
         if r != img:
@@ -32,7 +34,7 @@ def resize():
             assert (
                 img is not None
             ), "file could not be read, check with os.path.exists()"
-            res = cv2.resize(temp, None, fx=10, fy=10, interpolation=cv2.INTER_CUBIC)
+            res = cv2.resize(temp, None, fx=args.size, fy=args.size, interpolation=cv2.INTER_CUBIC)
             os.chdir(resized)
             cv2.imwrite(str(img), res)
             print(img + f"has been resized in {resized}")
@@ -41,6 +43,7 @@ def resize():
             print(f"{img}could not be resized")
 
 
-resize()
+if args.src:
+    resize()
 
 
